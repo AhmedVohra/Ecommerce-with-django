@@ -13,14 +13,14 @@ def About_page(request):
     "title":"About page.",
     "content":"Welcome to the about page"
     }
-        return render(request,"home_page.html",context)
+    return render(request,"home_page.html",context)
 
 def contact_page(request):
     context={
     "title":"Contact page.",
     "content":"Welcome to the contact page"
     }
-            return render(request,"home_page.html",context)
+    return render(request,"contact/view.html",context)
 
 def home_page_old(request):
     html_= """
