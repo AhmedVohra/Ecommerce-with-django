@@ -20,7 +20,7 @@ def contact_page(request):
     "title":"Contact page.",
     "content":"Welcome to the contact page"
     }
-    return render(request,"contact/view.html",context)
+    return render(request,"contacts/view.html",context)
 
 def home_page_old(request):
     html_= """
