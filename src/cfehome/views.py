@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .forms import ContactForm
 
 def home_page(request):
     context={
@@ -16,9 +17,11 @@ def About_page(request):
     return render(request,"home_page.html",context)
 
 def contact_page(request):
+    contact_form = ContactForm()
     context={
     "title":"Contact page.",
-    "content":"Welcome to the contact page"
+    "content":"Welcome to the contact page",
+    "form" : contact_form
     }
 
     if request.method == "POST":
